@@ -14,7 +14,7 @@ def draw_plot():
     
     # add years to the dataframe up to 2050
     append_years = []
-    for x in range(df['Year'].min(), 2051):
+    for x in range(df['Year'].min(), 2050): # changed to 2050 instead of 2051
         if x <= df['Year'].max():
             pass
         else:
@@ -28,7 +28,17 @@ def draw_plot():
     # Create second line of best fit
     df2 = df[(df.Year >= 2000) & (df.Year <= 2013)]
     new_res = linregress(df2['Year'], df2['CSIRO Adjusted Sea Level'])
-    plt.plot(df['Year'], new_res.intercept + new_res.slope * df['Year'])
+
+    # add addtl years to df2
+    append_years = []
+    for x in range(df2['Year'].min(), 2050):
+        if x <= df2['Year'].max():
+            pass
+        else:
+            append_years.append({'Year': x})
+    df2 = df2.append(append_years, ignore_index=True)
+
+    plt.plot(df2['Year'], new_res.intercept + new_res.slope * df2['Year'])
 
 
     # Add labels and title
