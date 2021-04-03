@@ -1,5 +1,8 @@
 # Changelog for in-progress branch
 
+## 04/03/2021 18:20
+Fixed another fail, the fail regarding the extra data plot points. One test remains.
+
 ## 04/03/2021 18:18
 Fixed one failure, the label typo.
 

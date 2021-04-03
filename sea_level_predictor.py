@@ -22,7 +22,7 @@ def draw_plot():
     df = df.append(append_years, ignore_index=True)
 
     # re-plot the chart (this will likely need to be done in a specific way that I'm not doing)
-    df.plot(x='Year', y='CSIRO Adjusted Sea Level', kind='scatter') # seems overly simple
+    # df.plot(x='Year', y='CSIRO Adjusted Sea Level', kind='scatter') # seems overly simple
     plt.plot(df['Year'], res.intercept + res.slope * df['Year'])    # this might be working?
 
     # Create second line of best fit
