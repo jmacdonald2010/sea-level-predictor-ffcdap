@@ -1,6 +1,9 @@
 # Changelog for in-progress branch
 
-# 04/03/2021 18:12
+## 04/03/2021 18:18
+Fixed one failure, the label typo.
+
+## 04/03/2021 18:12
 Three failures in the test. Details are below:
 
 - Test Data Plot Points
